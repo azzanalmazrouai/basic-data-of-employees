@@ -1,826 +1,0 @@
-<html>
-<head>
-<meta charset="utf-8"/>
-<title> القاعدة الذكية للبيانات الأساسية لموظفي (دائرة التوجيه المهني والإرشاد الطلابي) </title>
-<style>
-    h1 {
-        font-size: 2em;
-        color: #2c3e50;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
-    }    
-    table {
-        width: 90%;
-        margin: 20px auto;
-        border-collapse: collapse;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للجداول */
-        font-size: 1em;
-        color: #444;
-    }
-    th, td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: center;
-    }
-    th {
-        background-color: #3498db;
-        color: white;
-        font-weight: bold;
-    }
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-    tr:hover {
-        background-color: #e3f2fd;
-        transition: background-color 0.3s ease;
-    }
-    .form-link {
-        margin-top: 20px;
-        text-align: center;
-    }
-    .edit-form-button {
-        font-size: 1.3em;
-        padding: 15px 30px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: bold;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        display: inline-flex;
-        align-items: center;
-    }
-    .edit-form-button:hover {
-        background-color: #45a049;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-        animation: pulse 1s infinite alternate; /* نبض عند المرور */
-    }
-    @keyframes pulse {
-        from {
-            transform: scale(1);
-        }
-        to {
-            transform: scale(1.05);
-        }
-    }
-    
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: #333;
-        }
-        h1 {
-            font-size: 2em;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        .slogan {
-            font-size: 1.3em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        h2 {
-            font-size: 1.5em;
-            color: #2980b9;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-        .intro {
-            font-size: 1.2em;
-            color: #555;
-            margin: 0 auto;
-            padding: 10px;
-            max-width: 80%;
-            line-height: 1.6;
-        }
-        table {
-            width: 90%;
-            margin: 0 auto;
-            border-collapse: collapse;
-            font-size: 1em;
-            color: #444;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #d1ecf1;
-        }
-        .collapsible {
-            display: block;
-            margin-top: 10px;
-        }
-    </style>
-<script>
-        function toggleSection(id) {
-            var section = document.getElementById(id);
-            if (section.style.display === "none") {
-                section.style.display = "block";
-            } else {
-                section.style.display = "none";
-            }
-        }
-    </script>
-<script>
-    function searchTable() {
-        var input = document.getElementById("searchInput").value.toLowerCase();
-        var tables = document.getElementsByTagName("table");
-        for (var i = 0; i < tables.length; i++) {
-            var rows = tables[i].getElementsByTagName("tr");
-            for (var j = 1; j < rows.length; j++) { // نبدأ من 1 لتجاهل العنوان
-                var cells = rows[j].getElementsByTagName("td");
-                var found = false;
-                for (var k = 0; k < cells.length; k++) {
-                    if (cells[k].innerText.toLowerCase().includes(input)) {
-                        found = true;
-                        break;
-                    }
-                }
-                rows[j].style.display = found ? "" : "none";
-            }
-        }
-    }
-</script>
-</head>
-<body>
-<h1> القاعدة الذكية للبيانات الأساسية لموظفي (دائرة التوجيه المهني والإرشاد الطلابي) </h1>
-<p class="slogan">نحو تسهيل وصول موظفي الدائرة للبيانات الأساسية للموظفين.</p>
-<p class="intro"> <a href="https://home.moe.gov.om/region/northbatina/"> المديرية العامة للتربية والتعليم بمحافظة شمال الباطنة </a></p>
-<p class="intro"> <a href="https://moe.gov.om"> وزارة التربية والتعليم </a></p>
-<div class="form-link">
-<a class="edit-form-button" href="https://forms.gle/JA2GyMXE3Bpki7CE7" target="_blank"> استمارة طلب تعديل أو تحديث بيانات</a>
-</div>
-<style>
-    h1 {
-        font-size: 2em;
-        color: #2c3e50;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
-    }    
-    table {
-        width: 90%;
-        margin: 20px auto;
-        border-collapse: collapse;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للجداول */
-        font-size: 1em;
-        color: #444;
-    }
-    th, td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: center;
-    }
-    th {
-        background-color: #3498db;
-        color: white;
-        font-weight: bold;
-    }
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-    tr:hover {
-        background-color: #e3f2fd;
-        transition: background-color 0.3s ease;
-    }
-    .form-link {
-        margin-top: 20px;
-        text-align: center;
-    }
-    .edit-form-button {
-        font-size: 1.3em;
-        padding: 15px 30px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: bold;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        display: inline-flex;
-        align-items: center;
-    }
-    .edit-form-button:hover {
-        background-color: #45a049;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-        animation: pulse 1s infinite alternate; /* نبض عند المرور */
-    }
-    @keyframes pulse {
-        from {
-            transform: scale(1);
-        }
-        to {
-            transform: scale(1.05);
-        }
-    }
-    
-    .form-link {
-        margin-top: 20px;
-        text-align: center;
-    .edit-form-button {
-        font-size: 1.3em;
-        padding: 15px 30px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: bold;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        display: inline-flex;
-        align-items: center;
-    .edit-form-button:hover {
-        background-color: #45a049;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);}
-.edit-form-button::before {
-        content: "🖉";
-        margin-right: 8px;}
-</style>
-<div style="text-align:center; margin-top:20px;">
-<a class="suggestion-button" href="https://forms.gle/9PQMDWePGpfgeRv37" target="_blank"> تقديم المقترحات</a>
-</div>
-<style>
-     .suggestion-button {
-        font-size: 1.3em;
-        padding: 15px 40px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: bold;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        display: inline-block;
-    }
-    .suggestion-button:hover {
-        background-color: #45a049;
-        transform: scale(1.05);
-    }
-    .suggestion-button:active {
-        background-color: #388E3C;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        transform: scale(1);
-    }
-</style>
-<a href="https://wa.me/+96894660477/?text=مرحبا. لدي استفسار بشأن قاعدة البيانات الأساسية للموظفين, وهو كما يلي:          " onmouseout="this.style.backgroundColor='#4CAF50'; this.style.transform='scale(1)';" onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)';" style="display: inline-block; padding: 15px 40px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease, transform 0.3s ease;"> الدعم الفني السريع عبر واتس اب </a>
-<!-- مربع البحث -->
-<div class="search-container">
-<input class="search-input" id="searchInput" onkeyup="searchTable()" placeholder="ابحث باسم أو رقم الموظف" type="text"/>
-</div>
-<hr/><h2 onclick='toggleSection("section_0")'>أولا: مكتب مدير الدائرة:</h2>
-<div class="collapsible" id="section_0">
-<table>
-<tr>
-<th>م</th>
-<th>رقم الملف- الوظيفي</th>
-<th>اسم الموظف</th>
-<th>الرقم المدني</th>
-<th>المسمى الوظيفي</th>
-<th>رقم الهاتف المحمول</th>
-<th>المحول المكتبي</th>
-</tr>
-<tr>
-<td>1</td>
-<td>1661349</td>
-<td>عيسى بن سيف بن سعيد الشامسي</td>
-<td>2703145</td>
-<td>مدير دائرة: التوجيه المهني والإرشاد الطلابي.</td>
-<td>99373269</td>
-<td>7561</td>
-</tr>
-<tr>
-<td>2</td>
-<td>1682582</td>
-<td>د. محمد بن علي بن عبد الله البلوشي</td>
-<td>3674736</td>
-<td>المدير المساعد للتوجيه المهني والإرشاد الطلابي.</td>
-<td>99489481</td>
-<td>7772</td>
-</tr>
-<tr>
-<td>3</td>
-<td>1640567</td>
-<td>حسن بن خلفان بن محمد آل عبد السلام</td>
-<td>235697</td>
-<td>المدير المساعد للأنشطة التربوية.</td>
-<td>93680001</td>
-<td>7586</td>
-</tr>
-<tr>
-<td>4</td>
-<td>16169322</td>
-<td>بثينة بنت مهنا بن حمد الهاشمية</td>
-<td>11513115</td>
-<td>مصممة جرافيك.</td>
-<td>92972250</td>
-<td>-</td>
-</tr>
-<tr>
-<td>5</td>
-<td>16117902</td>
-<td>خالد بن خصيب بن حميد الشبلي</td>
-<td>7156875</td>
-<td>أخصائي دراسات ومتابعة أول.</td>
-<td>99050277</td>
-<td>8743</td>
-</tr>
-<tr>
-<td>6</td>
-<td>16169700</td>
-<td>خلود بنت عيسى بن خميس الغيثية</td>
-<td>12826986</td>
-<td>أخصائية دراسات ومتابعة.</td>
-<td>94454442</td>
-<td>8517</td>
-</tr>
-<tr>
-<td>7</td>
-<td>16105925</td>
-<td>سالم بن حمدان بن راشد الشيزاوي</td>
-<td>8788953</td>
-<td>مشرف تنسيق ومتابعة.</td>
-<td>99667058</td>
-<td>8744</td>
-</tr>
-<tr>
-<td>8</td>
-<td>1673241</td>
-<td>عبد الله بن سالم بن جمعة الصالحي</td>
-<td>3227831</td>
-<td>مراسل.</td>
-<td>99042561</td>
-<td>-</td>
-</tr>
-<tr>
-<td>9</td>
-<td>44400030</td>
-<td>عزان بن سيف بن محمد المزروعي</td>
-<td>10658475</td>
-<td>أخصائي دراسات ومتابعة.</td>
-<td>94660477</td>
-<td>8516</td>
-</tr>
-</table>
-</div>
-<hr/><h2 onclick='toggleSection("section_1")'>ثانيا: قسم: الإرشاد والتوعية:</h2>
-<div class="collapsible" id="section_1">
-<table>
-<tr>
-<th>م</th>
-<th>رقم الملف- الوظيفي</th>
-<th>اسم الموظف</th>
-<th>الرقم المدني</th>
-<th>المسمى الوظيفي</th>
-<th>رقم الهاتف المحمول</th>
-<th>المحول المكتبي</th>
-</tr>
-<tr>
-<td>10</td>
-<td>21678325</td>
-<td>حمدان بن عبد الله بن أحمد النبهاني</td>
-<td>2101282</td>
-<td>رئيس قسم الإرشاد والتوعية.</td>
-<td>99253330</td>
-<td>7564</td>
-</tr>
-<tr>
-<td>11</td>
-<td>133004</td>
-<td>ابتسام بنت عبد الله بن ابراهيم النوفلية</td>
-<td>١٢٢١٥٢٨٩</td>
-<td>أخصائية توعية صحية</td>
-<td>99732127</td>
-<td>8742</td>
-</tr>
-<tr>
-<td>12</td>
-<td>57978</td>
-<td>آمنة بنت سعيد بن علي الريسية</td>
-<td>3609639</td>
-<td>مشرفة أولى- إرشاد اجتماعي</td>
-<td>99050531</td>
-<td>8741</td>
-</tr>
-<tr>
-<td>13</td>
-<td>67060</td>
-<td>خالد بن خليفة بن سالم الزيدي</td>
-<td>2812499</td>
-<td>مشرف توعية صحية</td>
-<td>98289449</td>
-<td>8490</td>
-</tr>
-<tr>
-<td>14</td>
-<td>133005</td>
-<td>خولة بنت حارب بن سالم المعمرية</td>
-<td>6710767</td>
-<td>أخصائية توعية صحية</td>
-<td>92330603</td>
-<td>-</td>
-</tr>
-<tr>
-<td>15</td>
-<td>140623</td>
-<td>سعادة بنت محمد بن علي المقبالية</td>
-<td>5342533</td>
-<td>أخصائية توعية صحية</td>
-<td>91443444</td>
-<td>-</td>
-</tr>
-<tr>
-<td>16</td>
-<td>39710</td>
-<td>سعيد بن سليمان بن سعيد المعمري</td>
-<td>1587428</td>
-<td>مشرف إرشاد اجتماعي</td>
-<td>99319738</td>
-<td>-</td>
-</tr>
-<tr>
-<td>17</td>
-<td>16141618</td>
-<td>سلطان بن سالم بن محمد السعدي</td>
-<td>7816744</td>
-<td>مشرف إرشاد نفسي</td>
-<td>93649789</td>
-<td>-</td>
-</tr>
-<tr>
-<td>18</td>
-<td>140617</td>
-<td>شيخة بنت خميس بن محمد العبرية</td>
-<td>8810549</td>
-<td>أخصائية توعية صحية</td>
-<td>97161331</td>
-<td>-</td>
-</tr>
-<tr>
-<td>19</td>
-<td>132920</td>
-<td>زكريا بن حمدان محمد الفارسي</td>
-<td>7135685</td>
-<td>مشرف إرشاد اجتماعي</td>
-<td>99502774</td>
-<td>-</td>
-</tr>
-<tr>
-<td>20</td>
-<td>83092</td>
-<td>زليخة حسن صالح البلوشية</td>
-<td>1683092</td>
-<td>مشرفة إرشاد اجتماعي</td>
-<td>99310124</td>
-<td>-</td>
-</tr>
-<tr>
-<td>21</td>
-<td>16133006</td>
-<td>زينب بنت مبارك بن علي البلوشية</td>
-<td>14887167</td>
-<td>أخصائية توعية صحية</td>
-<td>‎97996116</td>
-<td>-</td>
-</tr>
-<tr>
-<td>22</td>
-<td>143809</td>
-<td>طاهرة بنت عبد الله بن سليمان المقبالية</td>
-<td>7327506</td>
-<td>أخصائية توعية صحية</td>
-<td>95060042</td>
-<td>-</td>
-</tr>
-<tr>
-<td>23</td>
-<td>105853</td>
-<td>عادل بن درويش بن عبد الله المجيني</td>
-<td>9709217</td>
-<td>مشرف إرشاد اجتماعي</td>
-<td>92200008</td>
-<td>-</td>
-</tr>
-<tr>
-<td>24</td>
-<td>111969</td>
-<td>عبد الله بن راشد بن محمد المعمري</td>
-<td>5033715</td>
-<td>أخصائي اشراف أول</td>
-<td>‎99038890</td>
-<td>-</td>
-</tr>
-<tr>
-<td>25</td>
-<td>16140643</td>
-<td>عبد الله بن محمد بن سالم البلوشي</td>
-<td>14339563</td>
-<td>مشرف إرشاد اجتماعي منتدب</td>
-<td>92244295</td>
-<td>-</td>
-</tr>
-<tr>
-<td>26</td>
-<td>117190</td>
-<td>فهيمة حمد خصيب السعيدية</td>
-<td>10659388</td>
-<td>مشرفة إرشاد اجتماعي</td>
-<td>99697499</td>
-<td>-</td>
-</tr>
-<tr>
-<td>27</td>
-<td>117168</td>
-<td>محمد بن عباس بن محمد احمد البلوشي</td>
-<td>6400506</td>
-<td>مشرف إرشاد اجتماعي</td>
-<td>98889019</td>
-<td>-</td>
-</tr>
-</table>
-</div>
-<hr/><h2 onclick='toggleSection("section_2")'>ثالثًا: قسم: الأنشطة التربوية:</h2>
-<div class="collapsible" id="section_2">
-<table>
-<tr>
-<th>م</th>
-<th>رقم الملف- الوظيفي</th>
-<th>اسم الموظف</th>
-<th>الرقم المدني</th>
-<th>المسمى الوظيفي</th>
-<th>رقم الهاتف المحمول</th>
-<th>المحول المكتبي</th>
-</tr>
-<tr>
-<td>28</td>
-<td>1691596</td>
-<td>أنيسة بنت محمد بن حمد الكيومية</td>
-<td>7584899</td>
-<td>رئيسة قسم الأنشطة التربوية</td>
-<td>99102060</td>
-<td>7567</td>
-</tr>
-<tr>
-<td>29</td>
-<td>1698183</td>
-<td>أمل بنت محمد بن إسماعيل الشكيلية</td>
-<td>3854326</td>
-<td>مشرفة أنشطة مدرسية</td>
-<td>99235296</td>
-<td>-</td>
-</tr>
-<tr>
-<td>30</td>
-<td>16153399</td>
-<td>إيمان بنت يوسف بن سعيد الكندية</td>
-<td>6927783</td>
-<td>أخصائية إشراف ثاني</td>
-<td>97077442</td>
-<td>-</td>
-</tr>
-<tr>
-<td>31</td>
-<td>1697252</td>
-<td>خلفان بن سعيد بن خميس القريني</td>
-<td>6955393</td>
-<td>مشرف أنشطة مدرسية</td>
-<td>‎95204909</td>
-<td>-</td>
-</tr>
-<tr>
-<td>32</td>
-<td>1660161</td>
-<td>سعيد بن خلفان بن مصبح الغيثي</td>
-<td>1660161</td>
-<td>مشرف أنشطة مدرسية</td>
-<td>99219491</td>
-<td>8709</td>
-</tr>
-<tr>
-<td>33</td>
-<td>16113085</td>
-<td>صالح بن محمد بن خميس المقبالي</td>
-<td>3463588</td>
-<td>مشرف أنشطة مدرسية</td>
-<td>‎99800661</td>
-<td>8738</td>
-</tr>
-<tr>
-<td>34</td>
-<td>1658040</td>
-<td>عقيل بن درويش بن يوسف اللواتي</td>
-<td>2153917</td>
-<td>مشرف أنشطة مدرسية</td>
-<td>91385558</td>
-<td>8739</td>
-</tr>
-<tr>
-<td>35</td>
-<td>16107514</td>
-<td>ماجد بن سيف بن محمد المقبالي</td>
-<td>6020313</td>
-<td>مشرف أنشطة مدرسية</td>
-<td>92310990</td>
-<td>-</td>
-</tr>
-<tr>
-<td>36</td>
-<td>1660167</td>
-<td>مبارك بن خلفان بن مبارك القطيطي</td>
-<td>2117897</td>
-<td>مشرف أنشطة مدرسية</td>
-<td>99435033</td>
-<td>-</td>
-</tr>
-</table>
-</div>
-<hr/><h2 onclick='toggleSection("section_3")'>رابعًا: قسم: التوجيه المهني:</h2>
-<div class="collapsible" id="section_3">
-<table>
-<tr>
-<th>م</th>
-<th>رقم الملف- الوظيفي</th>
-<th>اسم الموظف</th>
-<th>الرقم المدني</th>
-<th>المسمى الوظيفي</th>
-<th>رقم الهاتف المحمول</th>
-<th>المحول المكتبي</th>
-</tr>
-<tr>
-<td>37</td>
-<td>1683124</td>
-<td>حسين بن علي بن غلوم العجمي</td>
-<td>7435441</td>
-<td>رئيس قسم التوجيه المهني</td>
-<td>99244802</td>
-<td>8411</td>
-</tr>
-<tr>
-<td>38</td>
-<td>1640389</td>
-<td>أحمد بن علي بن سليمان العجمي</td>
-<td>271769</td>
-<td>مشرف توجيه مهني</td>
-<td>93947779</td>
-<td>-</td>
-</tr>
-<tr>
-<td>39</td>
-<td>16133597</td>
-<td>خليفة بن عبد الله بن سيف القطيطي</td>
-<td>9863696</td>
-<td>كاتب شؤون إدارية</td>
-<td>99739293</td>
-<td>-</td>
-</tr>
-<tr>
-<td>40</td>
-<td>1671331</td>
-<td>د راشد بن أحمد بن محمد المعمري</td>
-<td>2728301</td>
-<td>مشرف توجيه مهني منتدب</td>
-<td>95300525</td>
-<td>-</td>
-</tr>
-<tr>
-<td>41</td>
-<td>1640569</td>
-<td>قاسم بن علي بن حسن الشيزاوي</td>
-<td>1901959</td>
-<td>مشرف توجيه مهني</td>
-<td>99420262</td>
-<td>-</td>
-</tr>
-<tr>
-<td>42</td>
-<td>1691811</td>
-<td>موزة بنت حزيم بن سعيد الجابرية</td>
-<td>7604294</td>
-<td>مشرفة توجيه مهني منتدبة</td>
-<td>99421027</td>
-<td>-</td>
-</tr>
-<tr>
-<td>43</td>
-<td>16115957</td>
-<td>هلال بن علي بن عبيد الربيعي</td>
-<td>9096622</td>
-<td>مشرف توجيه مهني</td>
-<td>95300525</td>
-<td>-</td>
-</tr>
-<tr>
-<td>44</td>
-<td>1640505</td>
-<td>يونس بن علي بن عبد الله السدراني</td>
-<td>968107</td>
-<td>باحث شؤون إدارية</td>
-<td>99452825</td>
-<td>8413</td>
-</tr>
-</table>
-</div>
-<hr/><h2 onclick='toggleSection("section_4")'>خامسًا: قسم: الكشافة والمرشدات:</h2>
-<div class="collapsible" id="section_4">
-<table>
-<tr>
-<th>م</th>
-<th>رقم الملف- الوظيفي</th>
-<th>اسم الموظف</th>
-<th>الرقم المدني</th>
-<th>المسمى الوظيفي</th>
-<th>رقم الهاتف المحمول</th>
-<th>المحول المكتبي</th>
-</tr>
-<tr>
-<td>45</td>
-<td>16140788</td>
-<td>سالم بن محمد بن عبيد المعمري</td>
-<td>12403651</td>
-<td>رئيس قسم الكشافة والمرشدات</td>
-<td>99063965</td>
-<td>7774</td>
-</tr>
-<tr>
-<td>46</td>
-<td>16138188</td>
-<td>أحمد بن عبد الله بن علي النجادي</td>
-<td>3252393</td>
-<td>كاتب شؤون إدارية</td>
-<td>99885528</td>
-<td>-</td>
-</tr>
-<tr>
-<td>47</td>
-<td>1660369</td>
-<td>ثريا بنت سعيد بن علي المعمرية</td>
-<td>6001657</td>
-<td>مشرفة مرشدات</td>
-<td>99427299</td>
-<td>8411</td>
-</tr>
-<tr>
-<td>48</td>
-<td>1651414</td>
-<td>حمد بن خميس بن عبيد الفزاري</td>
-<td>2268346</td>
-<td>مشرف كشفي</td>
-<td>99824482</td>
-<td>8416</td>
-</tr>
-<tr>
-<td>49</td>
-<td>1670657</td>
-<td>خميس بن سرور بن مبارك البلوشي</td>
-<td>3958725</td>
-<td>مشرف كشفي</td>
-<td>99001561</td>
-<td>-</td>
-</tr>
-<tr>
-<td>50</td>
-<td>1660345</td>
-<td>سلمان بن علي بن خميس البحراني</td>
-<td>1253778</td>
-<td>مشرف كشفي</td>
-<td>97330793</td>
-<td>8415</td>
-</tr>
-<tr>
-<td>51</td>
-<td>16100388</td>
-<td>عفاف بنت محمد بن عبد الرحمن الزدجالية</td>
-<td>9203103</td>
-<td>مشرفة مرشدات</td>
-<td>92966617</td>
-<td>-</td>
-</tr>
-<tr>
-<td>52</td>
-<td>1657471</td>
-<td>علي بن ماجد بن عبد الله المرزوقي</td>
-<td>2032895</td>
-<td>مشرف تنسيق ومتابعة</td>
-<td>99218837</td>
-<td>-</td>
-</tr>
-</table>
-</div>
-<p class="footer-copy">©: الحقوق محفوظة لِِدائرة التوجيه المهني والإرشاد الطلابي
-<a expr:href="data:blog.homepageUrl">
-<strong>
-<data:blog.title></data:blog.title>
-</strong>
-</a><script type="text/javascript">document.write(new Date().getFullYear());</script></p>
-</body>
-</html>
